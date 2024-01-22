@@ -1,0 +1,75 @@
+<?php include "../_head.php"; ?>
+        <section class="sub_top sub_community"></section>
+        <div id="sub_wrap">
+            <section class="sub_ind_cont">
+                <div class="tit">
+                    <h1 class="text_ct">완주후기</h1>
+                    <ul>
+                        <li><a href="/review/">완주후기</a></li>
+                        <li class="on"><a href="/review/form.php">완주후기 쓰기</a></li>
+                    </ul>
+                </div>
+                <div class="common_box show2 on">
+					<form name="app_form_app" method="post" action="/review/update.php" target="rt_ifrm_appform" enctype="multipart/form-data">
+					<input type="hidden" name="mode" value="insert">
+                    <div class="notice_write">
+                        <div class="tit">
+                            <p>제목</p>
+                            <input type="text" name="title">
+                        </div>
+                        <textarea cols="30" rows="10" name="cont_tx" placeholder="내용을 입력하세요"></textarea>
+			<div class="file">
+        <p>대표 이미지</p>
+        <input class="upload-name1" value="첨부파일" placeholder="첨부파일">
+        <label for="file1">파일찾기</label>
+        <input type="file" name="file1" id="file1">
+    </div>
+    <div class="file">
+        <p>이미지</p>
+        <input class="upload-name2" value="첨부파일" placeholder="첨부파일">
+        <label for="file2">파일찾기</label>
+        <input type="file" name="file2" id="file2">
+    </div>
+    <div class="file">
+        <p>이미지</p>
+        <input class="upload-name3" value="첨부파일" placeholder="첨부파일">
+        <label for="file3">파일찾기</label>
+        <input type="file" name="file3" id="file3">
+    </div>
+    <div class="file">
+        <p>이미지</p>
+        <input class="upload-name4" value="첨부파일" placeholder="첨부파일">
+        <label for="file4">파일찾기</label>
+        <input type="file" name="file4" id="file4">
+    </div>
+                    </div>
+					</form>
+                    <div class="btn_box">
+                        <button onclick="location.href='/review/';">취소</button>
+                        <button onclick="formsubmit();">완료</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+<script>
+function formsubmit() {
+
+	var f = document.app_form_app;
+	if (f.title.value == "") {
+		alert("제목을 입력해 주세요.");
+		f.title.focus();
+	} else if (f.cont_tx.value == "") {
+		alert("내용을 입력해 주세요.");
+		f.cont_tx.focus();
+	} else if (f.file1.value == "") {
+		alert("대표 이미지를 입력해 주세요.");
+		f.file1.focus();
+	} else {
+		f.submit();
+	}
+
+}
+</script>
+ <iframe name="rt_ifrm_appform" id="rt_ifrm_appform" style="display:none;"></iframe> 
+<?php include "../_tail.php"; ?>

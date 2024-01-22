@@ -1,0 +1,560 @@
+/* 웹폰트 */
+@font-face {
+    font-family: 'OneMobile';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'OneMobile';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileRegular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileRegular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileRegular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'OneMobile';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/onestore/OneMobileBold.ttf') format("truetype");
+    font-display: swap;
+}
+/* 웹폰트 end */
+
+/* 헤더, footer (::after 560px) */
+html, body { overflow-x: hidden !important;}
+
+header { position: fixed; left: 0; top: 0; width: 100%; z-index: 9999; background: rgba(0, 0, 0, .5);}
+.header_dimm { display: none; width: 100%; height: 80px; position: absolute; left: 0; top: 0; background-color: #000; opacity: .8; z-index: -1;}
+header .header_wrap { display: flex; justify-content: space-between; align-items: center; max-width: 1320px; margin: 0 auto;}
+header .header_wrap.on { border-bottom: 1px solid #fff; padding-bottom: 20px;}
+header h1 a { display: block; width: 170px;}
+header nav > ul { display: flex;}
+header nav > ul > li > a { display: block; width: 180px; line-height: 80px; font-size: 22px; font-weight: 500; transition: all .3s ease-in; text-align: center;}
+header nav > ul > li > a.on { background-color: #710173;}
+
+
+header nav > ul > li { position: relative;}
+header nav > ul > li .sub_road_list { display: none; position: absolute; top: 80px; width: 100%; text-align: center; background-color: #710173;}
+header nav > ul > li .sub_road_list.show { display: block;}
+header nav > ul > li .sub_road_list li { margin-bottom: 20px;}
+header nav > ul > li .sub_road_list li:first-child { margin-top: 20px;}
+header nav > ul > li .sub_road_list li a { word-break: keep-all;}
+
+header .login ul { display: flex; gap: 20px;}
+header .login ul li { position: relative;}
+header .login ul li:first-child::after { content: ""; display: block; width: 2px; height: 20px; background-color: #fff; position: absolute; right: -12px; top: 1px;}
+header .login ul li a { font-weight: 500;}
+
+.mobile_menu_btn { cursor: pointer; width: 34px; height: 34px;}
+
+.mob_menu_list > li .sub_road_list { display: none;}
+
+footer { background-color: #710173;}
+footer .footer_wrap { display: flex; justify-content: space-between; align-items: center; max-width: 1320px; margin: 0 auto; padding: 70px 46px;}
+footer .footer_wrap address { width: 40%; font-style: normal;}
+footer .footer_wrap address p { margin-top: 22px; font-size: 20px; font-weight: 300; color: #c9c9c9; line-height: 1.4;}
+footer .footer_wrap address p span { font-size: 16px;}
+
+footer .footer_wrap .call { width: 60%; display: flex; flex-wrap: wrap;}
+footer .footer_wrap .call dl { margin-bottom: 40px; width: 50%; color: #c9c9c9;}
+footer .footer_wrap .call dl:nth-child(3), footer .footer_wrap .call dl:nth-child(4) { margin-bottom: 0;}
+footer .footer_wrap .call dl dt p { margin-bottom: 16px; width: 120px; line-height: 36px; border-radius: 18px; font-size: 20px; font-weight: 600; text-align: center; background-color: #fff; color: #710173;}
+footer .footer_wrap .call dl dd a { display: block; margin-top: 10px; font-size: 20px; font-weight: 600;}
+/* 헤더 footer end*/
+
+/* 메인 배너 */
+.main_banner { position: relative; height: 900px;}
+.main_banner .swiper.mySwiper { height: 100%;}
+.main_banner .slide_img_box { height: 100%;}
+.main_banner .swiper-slide { position: relative;}
+.main_banner .slide_img_box img { width: 100%; height: 100%; object-fit: cover;}
+.main_banner .swiper-slide .slide_img_box { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;}
+.main_banner .swiper-slide .text_box { max-width: 1320px; margin: 0 auto; position: absolute; left: 0; right: 0; top: 370px;}
+.main_banner .swiper-slide .text_box h2 {  font-size: 60px; font-weight: 600; font-family: 'skr2'; text-shadow: 0px 5px 5px #000000;}
+
+/* swiper 컨트롤러 */
+/*.control_box { max-width: 1320px; margin: 0 auto; position: relative; top:-76px; display: flex; justify-content: flex-end; align-items: center; z-index: 10;}
+#prev.swiper-button-prev,
+#next.swiper-button-next { position: static; width: 25px; height: 41px; margin-top: unset;}
+#prev.swiper-button-prev::after,
+#next.swiper-button-next::after { display: none;}
+#prev.swiper-button-prev { background: url(../images/slide_arrow_l.png) no-repeat; border: 1px solid transparent; border-radius: 100%; transition: all .2s ease; margin-right: 20px;}
+#next.swiper-button-next { background: url(../images/slide_arrow_r.png) no-repeat; border: 1px solid transparent; border-radius: 100%; transition: all .2s ease; margin-left: 20px;}
+#num.swiper-pagination { position: static;width: auto; font-size: 24px; color: #fff; background: unset; padding: 0 8px;}
+.control_box .btn_pause { width: 25px; height: 41px; background: url(../images/stop_btn.png) no-repeat center; margin-left: 14px;}
+.control_box .btn_pause.on { background: url(../images/paly_btn.png) no-repeat center;}*/
+
+
+.main_banner .swiper .swiper-pagination-bullet { background-color: #999; margin: 0 7.5px; width: 15px; height: 15px; opacity: 1;}
+.main_banner .swiper .swiper-pagination-bullet-active { background-color: #fff;}
+.main_banner .swiper-button-next, .swiper-button-prev { width: 86px; height:86px; position:absolute; top:50%;}
+.main_banner .swiper-button-next::after, .swiper-button-prev::after { display: none;}
+.main_banner .swiper-button-next { background:url("../images/next.png") no-repeat; right: 137px;}
+.main_banner .swiper-button-prev { background:url("../images/prev.png") no-repeat; left: 137px;}
+
+#bullet { bottom: 40px;}
+
+/* 유튜브 */
+.sb_tit { display: block; width: 280px; line-height: 50px; text-align: start; border: 1px solid #999; border-radius: 10px; padding-left: 42px; font-size: 1rem; font-weight: 600; color: #444; position: absolute; right: 0; bottom: 0; cursor: pointer;}
+.sb_tit .aw { position: absolute; right: 23px; top: 50%; transform: translateY(-50%) rotate(0); transition: all .35s;}
+.sb_tit .aw.on { transform: translateY(-50%) rotate(180deg);}
+.sb_box { display: none; width: 280px; border: 1px solid #999; padding: 20px 0 20px 42px; border-radius: 10px; position: absolute; right: 0; z-index: 10; background: #fff; top: 109px;}
+.sb_box.on { display: block;}
+.sb_box a { display: block; font-size: 1rem; font-weight: 600; color: #444; padding-bottom: 24px;}
+.sb_box a:nth-of-type(15) { padding-bottom: 0;}
+
+.you_close_btn { display: block; margin-left: auto; width: 30px; margin-bottom: 20px; cursor: pointer;}
+.close_btn img { width: 34px;}
+
+.youtube { position: absolute; top: 518px; left: 50%; transform: translateX(-50%); z-index: 50;}
+.youtube.on { display: none;}
+.youtube iframe { width: 800px; height: 450px;}
+
+
+
+
+
+
+
+
+
+
+/* 두번째 섹션 */
+.icon_list { background-color: #f9f9f9;}
+.icon_list ul { max-width: 1320px; margin: 0 auto; padding: 30px 0; display: flex; justify-content: space-between; align-items: center;}
+.icon_list ul li a { display: flex; align-items: center;}
+.icon_list ul li a dl { margin-left: 20px; color: #000; font-size: 24px;}
+.icon_list ul li a dl dd.bold { font-weight: 600;}
+.icon_list ul li a dl dt.bold { font-weight: 600;}
+
+/* 세번째 섹션 메인 컨텐츠 */
+.main_content { max-width: 1320px; margin: 74px auto 0; overflow: hidden;}
+.head { position: relative; color: #000;}
+h2.common { font-size: 48px; font-weight: 600;}
+h2.common.size { font-size: 1.5rem;}
+p.common { font-size: 24px; margin-top: 16px;}
+p.common.size { font-size: 18px;}
+p.common.size.line_h { font-size: 1.125rem; line-height: 1.6; font-weight: 500;}
+a.common { display: block; width: 184px; line-height: 56px; position: absolute; bottom: 0; right: 0; text-align: center; border: 1px solid #c1c1c1; border-radius: 28px; padding-left: 20px; background: url(../images/b_plus.png) no-repeat 42px center;}
+a.common.block { position: static; margin-top: 32px; padding-left: 40px;}
+
+.main_content .slide { color: #000; margin-top: 32px;}
+.main_content .slide .swiper-slide { position: relative;}
+.main_content .slide .swiper-slide a { display:block; height: 390px; position: relative;}
+.main_content .slide .swiper-slide a .road_cut { position: absolute; left: 40px; top: 50px;}
+.main_content .slide .swiper-slide.num1 a .road_cut { width: 82px; height: 71px;}
+.main_content .slide .swiper-slide.num2 a .road_cut { width: 99px; height: 71px;}
+.main_content .slide .swiper-slide.num3 a .road_cut { width: 103px; height: 71px;}
+.main_content .slide .swiper-slide.num4 a .road_cut { width: 110px; height: 72px;}
+.main_content .slide .swiper-slide.num5 a .road_cut { width: 122px; height: 73px;}
+.main_content .slide .swiper-slide.num6 a .road_cut { width: 102px; height: 71px;}
+.main_content .slide .swiper-slide.num7 a .road_cut { width: 95px; height: 72px;}
+.main_content .slide .swiper-slide.num8 a .road_cut { width: 103px; height: 71px;}
+.main_content .slide .swiper-slide.num9 a .road_cut { width: 105px; height: 73px;}
+.main_content .slide .swiper-slide.num10 a .road_cut { width: 114px; height: 71px;}
+.main_content .slide .swiper-slide.num11 a .road_cut { width: 111px; height: 71px;}
+.main_content .slide .swiper-slide.num12 a .road_cut { width: 126px; height: 71px;}
+.main_content .slide .swiper-slide.num13 a .road_cut { width: 131px; height: 71px;}
+
+
+
+
+
+.main_content .slide .swiper-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 15px;}
+.main_content .slide .swiper-slide .cont_slide_text { position: absolute; top: 132px; left: 122px; color: #fff;}
+
+
+.main_content .slide .swiper-slide::after { content: ""; display: block; width: 42px; height: 42px; background: url(../images/w_plus.png) no-repeat; position: absolute; right: 56px; bottom: 34px; }
+.main_content .slide .swiper-slide .cont_slide_text h3 { font-size: 36px; font-weight: 600;}
+.main_content .slide .swiper-slide .cont_slide_text p { margin-top: 18px; font-size: 24px; line-height: 1.4;}
+
+.main_content .notice { max-width: 1320px; margin: 52px auto 0;}
+.main_content .notice .text_bar { position: relative; display: flex; align-items: center; width: 100%; height: 70px; border-radius: 35px; padding: 0 66px; background: #6c4795 url(../images/w_warning.png)no-repeat left 30px center;}
+.main_content .notice .text_bar h3 { padding-left: 22px; font-size: 28px; font-weight: 500;}
+.main_content .notice .text_bar p { margin-left: 126px; font-size: 20px;}
+.main_content .notice .text_bar a { position: absolute; right: 66px; top: 50%; transform: translateY(-50%);}
+
+.main_content .notice .notice_list { display: flex; gap: 4%; margin-top: 72px; padding: 0 14px; color: #000;}
+.main_content .notice .notice_list a { position: absolute; right: 0; top: 0;}
+.main_content .notice .notice_list .skinny { position: relative; width: 56%;}
+.main_content .notice .notice_list .inform { position: relative; width: 40%;}
+
+.main_content .notice .notice_list h4 { font-size: 28px; font-weight: 500; padding-bottom: 36px; border-bottom: 1px solid #000;}
+
+.main_content .notice .notice_list ul li a { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 28px 0; font-size: 20px; border-top: 1px solid #cccccc;}
+.main_content .notice .notice_list ul li:last-child a { border-bottom: 1px solid #cccccc;}
+.main_content .notice .notice_list ul li a em { height: 20px;}
+.main_content .notice .notice_list ul li a p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.main_content .notice .notice_list ul li a p.new { padding-left: 60px; background: url(../images/new_icon.png) no-repeat left center;}
+.main_content .notice .notice_list ul li a span { font-size: 14px; color: #c1c1c1; white-space: nowrap;}
+
+/* 네번째 섹션 서브배너 */
+.sub_bnr { position: relative; margin-top: 88px; height: 382px; background-color: #f9f9f9; border-bottom: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8;}
+.sub_bnr .sub_bnr_wrap::before { content: ""; display: block; width: 284px; height: 279px; background: url(../images/item_icon.png) no-repeat center; background-size: contain; position: absolute; top: 50%; transform: translateY(-50%); left: 14px; z-index: 0;}
+.sub_bnr .sub_bnr_wrap::after { content: ""; display: block; width: 620px; height: 420px; background: url(../images/map.png) no-repeat center; background-size: contain; position: absolute; top: 50%; transform: translateY(-50%); right: -64px; z-index: 0;}
+.sub_bnr .sub_bnr_wrap { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 1320px; height: 100%; margin: 0 auto; position: relative;}
+.sub_bnr .sub_bnr_text { position: relative; z-index: 2; color: #000; padding-left: 340px;}
+.sub_bnr .sub_bnr_text strong { color: #6c4795; font-weight: 600;}
+a.common.block.sec4 { font-size: 24px; width: 255px; line-height: 68px; border-radius: 34px; font-weight: 600; border: 1px solid #222;}
+
+/* 다섯번째 섹션 완주후기 */
+.review { max-width: 1320px; position: relative; margin: 0 auto; padding: 90px 0;}
+.review .head { position: relative; color: #000;}
+.review ul { display: flex; justify-content: start; flex-wrap: wrap; margin-top: 48px;}
+.review ul li { width: calc(100% / 6); margin-bottom: 20px;}
+.review ul li figure { width: 202px; height: 198px; margin: 0 auto;}
+.review ul li figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 40px;}
+.review ul li a { text-align: center;}
+.review ul li a p { margin: 12px 0; font-size: 18px; font-weight: 500; color: #000;}
+
+/* ///////////////////////////////////////서브_외씨버선길_둘레길소개////////////////////////////////////////////////////////////////////// */
+.sub_top { width: 100%; height: 300px; background: url(../images/subpage_inrd1.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_idc { background: url(../images/sub_top1.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map2 { background: url(../images/rode_map2_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map3 { background: url(../images/rode_map3_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map4 { background: url(../images/rode_map4_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map5 { background: url(../images/rode_map5_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map6 { background: url(../images/rode_map6_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map7 { background: url(../images/rode_map7_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map8 { background: url(../images/rode_map8_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map9 { background: url(../images/rode_map9_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map11 { background: url(../images/rode_map11_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map12 { background: url(../images/rode_map12_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_map13 { background: url(../images/rode_map13_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_cp1_top { background: url(../images/sub_cp1_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.rode_cp2_top { background: url(../images/sub_cp2_top.png) no-repeat bottom; background-size: cover;}
+.sub_top.sub_community { background: url(../images/sub_community_top.png) no-repeat bottom; background-size: cover;}
+#sub_wrap { max-width: 1100px; margin: 0 auto;}
+
+/* 버튼 */
+.sub_ind_cont { margin-top: 68px;}
+.sub_ind_cont .tit h1 { font-size: 3rem; font-weight: 900; text-align: center; font-family: 'OneMobile'; color: #000;}
+.sub_ind_cont .tit ul { margin-top: 60px; display: flex; border-bottom: 1px solid #e9e9e9;}
+.sub_ind_cont .tit ul li { width: 50%; text-align: center; font-size: 1.5rem; font-weight: 600; color: #666666; cursor: pointer;}
+.sub_ind_cont .tit ul li.on { color: #6c4795; border-bottom: 4px solid #6c4795; padding-bottom: 22px;}
+
+/* 주왕산 달기약수탕길 소개 */
+.rode_map { margin-top: 100px;}
+.rode_map.pb { padding-bottom: 100px;}
+.plus_btn.common.pup { color: #fff; background: #6c4795 url(../images/ws_plus.png) no-repeat 42px center;}
+.rode_map .map_cont { padding: 0 50px; margin: 44px auto 0;}
+.rode_map .map_cont ul { margin-top: 34px; display: flex; flex-wrap: wrap; justify-content: flex-start;}
+.rode_map .map_cont ul li { position: relative; width: calc(100% / 5); text-align: center;}
+.rode_map .map_cont ul li:nth-child(-n+5) { margin-bottom: 40px;}
+.rode_map .map_cont ul li::after { content: ""; display: block; width: 120px; height: 4px; background-color: #d8d8d8; position: absolute; top: 30%; right: -60px; border-radius: 30px; border: 1px solid #c1c1c1;}
+.rode_map .map_cont ul li:last-child::after { display: none;}
+.rode_map .map_cont ul li:nth-child(5n)::after { display: none;}
+.rode_map .map_cont ul li p { font-size: 1rem; font-weight: 600; color: #000;}
+
+.rode_map .map_cont h3 { margin-top: 60px; font-size: 1.5rem; color: #000; word-break: keep-all; line-height: 1.6;}
+.rode_map .map_cont .level { margin-top: 34px; width: 100%; height: 70px; display: flex; justify-content: space-around; align-items: center; background: #6c4795; border-radius: 35px;}
+.rode_map .map_cont .level p { font-size: 1.75rem;}
+.rode_map .map_cont .level p span { font-weight: 900;}
+
+/* 교통안내 */
+.traffic { margin-top: 126px;}
+.traffic .traffic_list { margin-top: 76px;}
+.traffic .traffic_list ul li { position: relative; padding-left: 154px; padding-bottom: 26px; border-bottom: 1px solid #f1f1f1; color: #000;}
+.traffic .traffic_list ul li:nth-child(2) { margin-top: 56px;}
+.traffic .traffic_list ul li:nth-child(1):before { content: ""; display: block; width: 111px; height: 95px; background: url(../images/car.png) no-repeat; background-size: contain; position: absolute; top: -30px; left: 42px;}
+.traffic .traffic_list ul li:nth-child(2):before { content: ""; display: block; width: 89px; height: 91px; background: url(../images/bus.png) no-repeat; background-size: contain; position: absolute; top: -30px; left: 52px;}
+.traffic .traffic_list ul li h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 42px;}
+.traffic .traffic_list ul li p { font-size: 1.25rem; margin-bottom: 12px;}
+.traffic .traffic_list ul li p:nth-of-type(2) { margin-bottom: 0;}
+
+.bus_time { margin-bottom: 26px;}
+.bus_time dt { margin-bottom: 26px; width: 320px; line-height: 32px; text-align: center; font-size: 1.25rem; font-weight: 600; background: #f6eefe; border: 1px solid #d5cedc; border-radius: 18px;}
+.bus_time dd { display: flex; flex-wrap: wrap;}
+.bus_time dd span { width: calc(100% / 8); font-size: 1.25rem; text-align: center; margin-top: 20px;}
+.bus_time dd span:nth-of-type(-n+8) { margin-top: 0;}
+
+/* 주왕산, 달기약수탕길 갤러리 슬라이드 */
+.swiper_slide { position: relative; margin-top: 112px; padding: 70px 0; background-color: #170828;}
+.swiper_slide::before { content: ""; display: block; width: 5000px; height: 100%; background-color: #170828; position: absolute; left: -100%; top: 0; z-index: -1;}
+.swiper_slide .swiper_wrap { max-width: 1320px; margin: 0 auto;}
+.swiper_slide .swiper_wrap h3 { margin-bottom: 50px; font-size: 2.25rem; font-weight: 600; text-align: center;}
+.swiper_slide .swiper_wrap .swiper-wrapper.sub_slide_wrap { width: 1100px; margin: 0 auto;}
+.swiper_slide .swiper_wrap .swiper-wrapper.sub_slide_wrap img { width: 100%;}
+
+.swiper-button-next.sub_slide_wrap,
+.swiper-button-prev.sub_slide_wrap { width: 58px; height: 58px; position: absolute; top: 50%;}
+.swiper-button-next.sub_slide_wrap::after,
+.swiper-button-prev.sub_slide_wrap::after { display: none;}
+.swiper-button-next.sub_slide_wrap { background: url(../images/sub_slide_al.png) no-repeat; left: -84px; background-size: contain;}
+.swiper-button-prev.sub_slide_wrap { background: url(../images/sub_slide_ar.png) no-repeat; left: unset; right: -84px; background-size: contain;}
+
+/* 산 둘러보기 */
+.mountain_list { margin-top: 148px;}
+.mountain_list ul { margin-top: 66px;}
+.mountain_list ul li { display: flex; align-items: center; gap: 3%; padding: 50px 0; border-bottom: 1px solid #f1f1f1;}
+.mountain_list ul li.n_line { border: 0;}
+.mountain_list ul li:nth-child(1) { padding: 0 0 50px 0;}
+.mountain_list ul li figure { width: 45%;}
+.mountain_list ul li figure .br {  filter: brightness(150%);}
+.mountain_list ul li dl { width: 55%; color: #000;}
+.mountain_list ul li dl dt { margin-bottom: 30px; font-size: 1.5rem; font-weight: 600;}
+.mountain_list ul li dl dd { font-size: 1.125rem; line-height: 1.4; word-break: keep-all;}
+.mountain_list ul li dl dd p.pup { color: #6c4795;}
+/* 주왕산 달기약수탕길 소개 end */
+.common_box { display: none;}
+.common_box.show1.on { display: block;}
+.common_box.show2.on { display: block;}
+.common_box.show3.on { display: block;}
+.common_box.show4.on { display: block;}
+
+/* 식당 및 숙박 소개 */
+.restaurant { margin-top: 100px;}
+.restaurant .head span { display: block; margin-top: 60px; padding-left: 24px; font-size: 1.25rem; font-weight: 500; line-height: 1.6; word-break: keep-all;}
+.list_itd { margin-top: 60px; color: #000;}
+.list_itd h3 { font-size: 1.875rem; font-weight: 600;}
+.list_itd dl { margin-top: 30px; padding: 30px 38px; border: 1px solid #d8d8d8; border-radius: 25px; background-color: #f9f9f9;}
+.list_itd dl dt p { font-size: 1.125rem; font-weight: 600; margin-bottom: 12px;}
+.list_itd dl dt p.pup { color: #6c4795; size: 1.5rem; font-weight: 900;}
+.list_itd dl dt span { font-size: 1rem; line-height: 1.4;}
+.list_itd dl dd { margin-top: 40px;}
+.list_itd dl dd p { margin-bottom: 14px; font-size: 1.125rem; font-weight: 600; color: #6c4795;}
+.list_itd dl dd p:nth-of-type(2) { margin-bottom: 0;}
+
+/* tabel */
+.restaurant_list { margin-top: 20px; border-top: 2px solid #6c4795;}
+.restaurant_list.two { padding-bottom: 100px;}
+.restaurant_list table { width: 100%; color: #000; margin-bottom: 100px;}
+.restaurant_list table th { padding: 24px 0; font-size: 1.125rem; font-weight: 600; border-bottom: 1px solid #d9d9d9;}
+.restaurant_list table td { vertical-align: middle; position: relative; padding: 24px 0; font-size: 1.125rem; font-weight: 400; border-bottom: 1px solid #d9d9d9; text-align: center;}
+/* .restaurant_list table td a.call { position: absolute; right: 40px; top: 50%; transform: translateY(-50%);} */
+.restaurant_list table tr:last-child { border-bottom: 2px solid #d9d9d9;}
+
+/* 외씨버선길소개 */
+.content { margin-top: 42px; display: flex; align-items: center; gap: 4%;}
+.content.line { margin-top: 0; border-bottom: 1px solid #f1f1f1; padding: 54px 0;}
+.content dt { width: 40%;}
+.content dt.wd { width: 30%}
+.content dt.full { width: 100%;}
+.content dt img { width: 100%; height: 100%; object-fit: cover;}
+.content dd { width: 60%; color: #000;}
+.content dd p { font-size: 1.25rem; line-height: 1.6;}
+.content dd h4 { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px;}
+.content dd p:nth-of-type(2) { margin-top: 50px;}
+.content dd p.mt_no {margin-top: 20px;}
+
+.content dd ul li { margin-bottom: 20px; font-size: 1.25rem;}
+
+.content dd .location { margin-top: 24px; width: 100%; padding: 20px; border: 1px solid #d8d8d8; background: #f9f9f9; border-radius: 30px;}
+.content dd .location span { font-size: 1.125rem; font-weight: 600; color: #6c4795;}
+
+/* 완주안내 */
+.bnr_itd { margin-top: 32px;}
+.bnr_itd figcaption { margin-top: 80px; padding: 30px 34px; width: 100%; border-radius: 35px; background-color: #6c4795;}
+.bnr_itd figcaption p { margin-bottom: 20px; font-size: 1.5rem; font-weight: 600;}
+.bnr_itd figcaption span { font-size: 1.125rem; line-height: 1.6;}
+
+.stamp { margin: 30px 14px;}
+.stamp h4 { font-size: 1.5rem; font-weight: 600;}
+.stamp ul { padding: 18px 20px; border-top: 1px solid #f1f1f1; border-bottom: 1px solid #f1f1f1;}
+.stamp ul li { margin-bottom: 56px;}
+.stamp ul li:last-child { margin-bottom: 0;}
+.stamp ul li .text_list h5 { font-size: 1.125rem; margin-bottom: 20px; font-weight: 600; color: #6c4795;}
+.stamp ul li .text_list p { font-size: 1.125rem; margin-bottom: 20px; color: #000; font-weight: 500;}
+.stamp ul li .text_list p:last-child { margin-bottom: 0;}
+.stamp ul li .text_list .address { padding: 24px 30px; width: 568px; border: 1px solid #d8d8d8; border-radius: 30px; background-color: #f9f9f9;}
+
+.plus_btn.common.pup.bn { background-image: none; padding-left: 0;}
+
+.point_guide { margin-top: 150px;}
+.point_guide ul { margin-top: 90px; display: flex; flex-wrap: wrap;}
+.point_guide ul li { width: 50%; margin-bottom: 50px;}
+.point_guide ul li h4 { font-size: 1.5rem; font-weight: 600; color: #000;}
+.point_guide ul li .point_img_box { margin-top: 54px; display: flex; justify-content: space-around;}
+.point_guide ul li .point_img_box dd { margin-top: 20px; text-align: center; font-size: 1.125rem; font-weight: 500; color: #000;}
+
+/* 장계향디미방길 */
+.story { margin-top: 64px;}
+.story p { margin-bottom: 36px; font-size: 1.5rem; font-weight: 600; color: #6c4795;}
+.story p::after { margin-left: 32px; content: ""; display: inline-block; width: 76%; height: 2px; vertical-align: super; background-color: #6c4795;}
+.story span { font-size: 1.125rem; line-height: 1.6; font-weight: 500; color: #6c4795;}
+
+/* 3길 버스시간표 */
+.doub_time { display: flex;}
+.doub_time dl { width: 50%;}
+.doub_time .bus_time dd { gap: 2px;}
+.doub_time .bus_time dd span { width: calc(100% / 6);}
+.doub_time .bus_time dd span:nth-of-type(-n+6) { margin-top: 0;}
+.doub_time .bus_time dd span:nth-of-type(-n+8) { margin-top: 20px;}
+
+/* 7길 버스 */
+.traffic .traffic_list ul li p.num7p:nth-of-type(2) { margin-bottom: 12px; padding-left: 64px;}
+/* 8길 버스 */
+.doub_time .bus_time dd.gapn { gap: 0;}
+.doub_time .bus_time dd span.for { width: calc(100% / 4);}
+.traffic .traffic_list ul li p.nthmb { margin-bottom: 12px;}
+
+/* 완주후기 */
+.review_list { margin: 90px 0; display: flex; flex-wrap: wrap; gap: 16px;}
+.review_list li { width: calc(100% / 6 - 14px);}
+.review_list li figure { width: 100%; height: 180px; margin: 0 auto;}
+.review_list li figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 40px;}
+.review_list li figcaption { text-align: center;}
+.review_list li figcaption p { margin: 10px 0; font-size: 1.125rem; word-break: keep-all; color: #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.page_num { margin-bottom: 100px; display: flex; justify-content: center; align-items: center; gap: 20px;}
+.page_num li a { display: block; padding: 20px; text-align: center; color: #000;}
+.page_num li a.left_btn,
+.page_num li a.right_btn { width: 52px; height: 52px; padding: 0;}
+.page_num li a.on { border-bottom: 1px solid #6c4795;}
+
+/* 팝업 */
+.layer_dimm {  display:none; background:#000; height:100%; left:0; opacity:.7; position:fixed; top:0; width:100%; z-index:99; }
+.popup_box {  display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px 30px; width: 958px; height: auto; background-color: #fff; z-index: 9999; border-radius: 15px;}
+.popup_box button { display: block; width: 26px; height: 28px; position: absolute; right: 30px; top: 20px; background: url(../images/close_popup.png)no-repeat center; cursor: pointer;}
+.popup_box h3 { padding: 0 0 26px 30px; font-size: 1.5rem; font-weight: 600; color: #6c4795; border-bottom: 1px solid #999999;}
+.popup_box span { display: block; padding: 16px 0 16px 30px; font-size: 1.125rem; color: #000; border-bottom: 1px solid #999999;}
+.popup_box .cont { height: 440px; margin-top: 46px; overflow-y: auto;}
+.popup_box .cont::-webkit-scrollbar { width: 5px; background-color: #666; border-radius: 2.5px; }
+.popup_box .cont figure { text-align: center;}
+.popup_box .cont figcaption { margin-top: 34px;}
+.popup_box .cont figcaption p { color: #000;}
+
+/* 완주후기 글쓰기 */
+.notice_write { margin-top: 54px;}
+.notice_write p { font-size: 1.5rem; font-weight: 600; color: #000;}
+.notice_write .tit { display: flex; justify-content: space-between; align-items: center;}
+.notice_write .tit input { padding: 0 28px; width: 94%; height: 70px; border: 1px solid #d8d8d8; outline: none; background-color: #f9f9f9;}
+.notice_write textarea { margin: 40px 0 20px; font-size: 1.25rem; padding: 28px; width: 100%; height: 590px; resize: none; color: #000; border: 1px solid #d8d8d8; background-color: #f9f9f9; overflow-y: auto;}
+.notice_write .file { display: flex; align-items: center; margin-bottom: 20px;}
+.notice_write .file #file_up { display: none;}
+.notice_write .file #file_name { margin-left: 24px; padding: 0 28px; width: 52%; height: 70px; font-size: 1.25rem; border: 1px solid #d8d8d8; outline: none; background-color: #f9f9f9;}
+.notice_write .file label { margin-left: 12px; padding: 0 30px; line-height: 30px; font-size: 1.25rem; font-weight: 600; border: 1px solid #d8d8d8; outline: none; background-color: #f9f9f9; color: #000;}
+
+.btn_box { margin-top: 50px; padding: 36px 0 100px 0; text-align: right; border-top: 1px solid #d8d8d8;}
+.btn_box button { margin-left: 14px; padding: 14px 64px; font-size: 1.25rem; border: 1px solid #d8d8d8; border-radius: 28px; color: #666; cursor: pointer;}
+
+/* 커뮤니티 가이드 */
+.search { margin: 60px 0; text-align: center;}
+.search input { width: 400px; height: 60px; padding: 0 26px; outline: none; border: none; background: #f7f7f7 url(../images/search_icon.png) no-repeat right 26px center; border-radius: 10px;}
+.list { padding-bottom: 68px;}
+.list table { width: 100%; border-top: 2px solid #000; color: #000;}
+.list table tbody tr { border-bottom: 1px solid #cccccc;}
+.list table tbody td { padding: 30px 0; font-size: 1.25rem; text-align: center;}
+.list table tbody td a { overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.list table tbody td .download { margin-left: 10px; cursor: pointer;}
+
+/* 11길 주의사항 */
+.note { margin-top: 54px; padding: 50px 20px 50px 170px; width: 100%; height: auto; border: 1px solid #dcdcdc; background: #f9f9f9 url(../images/note_y.png) no-repeat left 33px center; color: #000; border-radius: 15px;}
+.note p { margin-bottom: 14px; font-weight: 600; font-size: 1.125rem;}
+.note p.mt { margin-top: 42px;}
+.note span { display: block; line-height: 1.6; font-size: 1.125rem;}
+
+/* 기념품 */
+.item_list > h4 { color:#000; font-weight: 600; padding-top: 50px; padding-bottom: 20px;border-bottom: 1px solid #f1f1f1; font-size: 1.5rem;}
+
+/* 가이드북 */
+.guide_book { margin-top: 30px; padding: 0 100px;}
+.guide_book p { font-size: 1.25rem; color: #000; line-height: 1.4; word-break: keep-all;}
+.guide_book .mid { padding: 30px 0;}
+.guide_book .pup { color: #6d04e0;}
+
+/* 공지사항, 로그인, 회원가입 */
+.rt-rwd-search-wrap {margin-top: 20px;}
+.rt-rwd-notice-wrap {margin-top: 20px;}
+
+#agr-all, #agr1, #agr2 {width: 20px;height: 20px;vertical-align: middle;margin-right: 10px;}
+.rt-rwd-login-box .rt-rwd-login-send { float: unset !important; margin-right: unset !important; margin: 0 auto !important;}
+.rt-rwd-member-wrap {text-align: center;}
+.rt-rwd-login-box .rt-rwd-login-tac {padding: unset !important; float: unset !important; margin-top: 20px;}
+
+/* 파일 업로드 */
+.file .upload-name {display: inline-block;height: 40px;padding: 0 10px;vertical-align: middle;border: 1px solid #dddddd;width: 78%;color: #999999;}
+.file label {display: inline-block;padding: 10px 20px;color: #fff;vertical-align: middle;background-color: #999999;cursor: pointer;margin-left: 10px;}
+.file input[type="file"] {position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;}
+.file input:nth-of-type(1) { border: 1px solid #d8d8d8; outline: none; background-color: #f9f9f9; line-height: 30px; margin-left: 12px; width: 230px; padding: 0px 10px;}
+
+/* 달력 */
+        .calendar_box .c_tit { text-align: center;}
+        .calendar_box .c_tit h3 { color: #444; font-size: 3rem; font-weight: 400; margin-bottom: 75px;}
+        .calendar_box .c_tit span { font-weight: 100;}
+        .calendar_box .c_tit p { color: #444; font-size: 1.25rem;}
+        .calendar_box .c_tit p:nth-of-type(1) { margin-bottom: 50px;}
+
+        .c_list { margin-top: 70px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;}
+
+        .c_down { display: block; margin: 55px auto; width: 327px; line-height: 76px; font-size: 1.5rem; border-radius: 10px; color: #fff; background: #6c4795; cursor: pointer;}
+
+
+/* 인증사진 포인트 안내 */
+        .bold { font-weight: 600;}
+        p.common.size.line_h b { font-weight: 600; color: #710173;}
+
+        .point_sp { margin: 40px 0 150px;}
+        .stemp_icon { margin-bottom: 40px;}
+
+        .table_basic table { width: 100%; color: #000;}
+        .table_basic table tr { border-bottom: 1px solid #999;}
+        .table_basic table th { line-height: 64px; font-size: 1.5rem;  background: #710173; color: #fff;}
+        .table_basic table th:nth-of-type(1), .table_basic table th:nth-of-type(2) { border-right: 1px solid #999;}
+        .table_basic table td { line-height: 64px; font-size: 1.125rem; font-weight: 600; color: #000; text-align: center;}
+        .table_basic table td:nth-of-type(1), .table_basic table td:nth-of-type(2) { border-right: 1px solid #999;}
+
+/* 길 공통 수정 */
+        .map_link { margin-top: 40px;}
+        .map_link span { font-size: 1.5rem; font-weight: 600; margin-left: 66px;}
+        .map_link .kakamap { margin-left: 174px;}
+        .map_link .navermap { margin-left: 80px;}
+
+        .map_link dt { display: flex; height: 144px; align-items: center; background: #f9f9f9; border: 1px solid #d3d3d3; margin-bottom: 20px;}
+        .map_link dd { display: flex; height: 144px; align-items: center; background: #f9f9f9; border: 1px solid #d3d3d3;}
+
+        .kakamap a, .navermap a { display: flex; align-items: center; gap: 10px;}
+        .kakamap a strong, .navermap a strong { font-size: 1.3rem; font-weight: 600;}
+
+        .traffic .traffic_list ul li { padding-bottom: 52px;}
+
+        .bus_time { position: relative; margin-left: 70px; display: block; font-size: 1.125rem; font-weight: 500; color: #710173;}
+        .bus_time button, .sb_time button { width: 200px; height: 58px; position: absolute; right: 0; bottom: 0; background: #710173; color: #fff; font-size: 1.5rem; font-weight: 500; cursor: pointer; border-radius: 29px;}
+        .sb_time button { bottom: 120px;}
+
+
+        .popup, .popup2 { display: none; width: 480px; height: auto; position: fixed; background: #fff; z-index: 999999; left: 50%; transform: translate(-50%, -50%); top: 50%;}
+        .p_head { display: flex; justify-content: space-between; padding: 0 10px; align-items: center; height: 68px; background: #710173; }
+        .p_head button { cursor: pointer;}
+        .p_head button img { width: 24px;}
+
+        .tit h1 span { display: inline-block; width: 66px; line-height: 50px; border-radius: 5px; background: #710173; vertical-align: middle; color: #fff; text-align: center; margin-right: 24px;}
+        .sub_ind_cont .tit h1 { text-align: start; position: relative;}
+	.sub_ind_cont .tit h1.text_ct { text-align: center;}
+
+	.sb_box.road { top: 65px;}
+
+/* 방문정보안내 */
+        .visit_top { margin-top: 72px; display: flex; padding: 0 30px; gap: 40px;}
+
+        .visit_top figcaption { color: #444;}
+        .visit_top figcaption h4 { font-size: 2.25rem; font-weight: 400;}
+        .visit_top figcaption > p:nth-of-type(1) { margin-top: 26px;}
+        .visit_top figcaption > p:nth-of-type(2) { margin-top: 50px;}
+        .visit_top figcaption > p { padding-left: 16px; font-size: 1.25rem; word-break: keep-all;}
+
+        .bank { margin-top: 28px; border-radius: 10px; background: #5e3e81; color: #fff; padding: 34px 36px 24px 46px;}
+        .bank h5 { font-size: 1.5rem; font-weight: 400; position: relative;}
+        .bank h5::after { content: ""; display: inline-block; width: calc(100% - 100px); height: 1px; background-color: #fff; position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 9;}
+        .bank p { font-size: 1.5rem; font-weight: 400; margin-top: 8px; color: #fff;} 
+        .bank span { display: block; padding-left: 10px;}
+        .bank span:nth-of-type(1) { margin-top: 16px;}
+        .bank span:nth-of-type(2) { margin-top: 6px;}
+
+        .visit_bt { margin-top: 60px; margin-bottom: 50px;}
+

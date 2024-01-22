@@ -1,0 +1,595 @@
+@media screen and (max-width:1470px) { /* PC용 */
+    /* 메인 페이지 헤더 */
+    header { max-width: 100%; padding: 0 60px;}
+    header h1 a { display: block; width: 180px;}
+    header nav ul li a { font-size: 18px;}
+    header .login ul { gap: 20px;}
+    header .login ul li:first-child::after { content: ""; display: block; width: 1px; height: 16px; background-color: #fff; position: absolute; right: -12px; top: 2px;}
+    header .login ul li a { font-size: 14px;}
+    header::after { height: 110px;}
+
+    header nav > ul > li .sub_road_list li a { font-size: 14px;}
+
+    /* 메인 배너 */
+    .main_banner { position: relative; height: 800px;}
+    .main_banner .swiper.mySwiper { height: 100%;}
+    .main_banner .slide_img_box { height: 100%;}
+    .main_banner .slide_img_box img { width: 100%; height: 100%; object-fit: cover;}
+    .main_banner .swiper-slide .text_box { max-width: 100%; padding: 0 60px; top: 260px;}
+
+    /* swiper 컨트롤러 */
+    .control_box { max-width: 100%; padding: 0 60px; top:-76px;}
+    #prev.swiper-button-prev,
+    #next.swiper-button-next { position: static; width: 19px; height: 35px; margin-top: unset; background-size: cover;}
+    #num.swiper-pagination { position: static; width: auto; font-size: 24px; color: #fff; background: unset; padding: 0 8px;}
+    .control_box .btn_pause { width: 25px; height: 41px; background: url(../images/stop_btn.png) no-repeat center; margin-left: 14px;}
+    .control_box .btn_pause.on { background: url(../images/paly_btn.png) no-repeat center;}
+
+    /* sub_스와이퍼 컨트롤러 */
+    .swiper-button-next.sub_slide_wrap { left: -30px;}
+    .swiper-button-prev.sub_slide_wrap { right: -30px;}
+
+
+    /* 두번째 섹션 */
+    .icon_list ul { max-width: 100%; padding: 30px 60px;}
+    .icon_list ul li a { display: block; text-align: center;}
+    .icon_list ul li a dl { margin-top: 10px; margin-left: 0; font-size: 20px;}
+
+    /* 메인 컨텐츠 */
+    .main_content { max-width: 100%; padding: 0 60px; margin: 74px auto 0;}
+
+    /* 네번째 섹션 메인 컨텐츠 */
+    .sub_bnr { position: relative; margin-top: 88px; height: 382px; background-color: #f9f9f9; border-bottom: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8;}
+    .sub_bnr .sub_bnr_wrap::after { display: none;}
+    .sub_bnr .sub_bnr_wrap { max-width: 100%;padding: 0 60px;}
+
+    /* 다섯번째 섹션 완주후기 */
+    .review { max-width: 100%; padding: 90px 60px;}
+    .review ul { display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 48px;}
+    .review ul li { width: calc(100% / 3);}
+    .review ul li a p { margin: 12px 0; font-size: 18px; font-weight: 500; color: #000;}
+
+    /* 주왕산 달기약수탕길 갤러리 */
+    .swiper_slide .swiper_wrap { max-width: 100%; padding: 0 60px;}
+}
+@media screen and (max-width:1240px) {
+    header nav > ul > li > a { padding: 0 16px;}
+}
+@media screen and (max-width:1100px) { /* 모바일용 */ /* 여기서 햄버거 메뉴 등장 */    
+    /* 메인 배너 */
+    .main_banner { position: relative; height: 600px;}
+    header nav > ul { gap: 20px;}
+
+    .main_banner .swiper-button-next, .swiper-button-prev { width: 56px; height: 56px;}
+    .main_banner .swiper-button-next { background: url(../images/next.png) no-repeat center/cover; right: 50px;}
+    .main_banner .swiper-button-prev { background: url(../images/prev.png) no-repeat center/cover; left: 50px;}
+
+    /* 메인 배너 text */
+    .main_banner .swiper-slide .text_box { top: 50%; transform: translateY(-50%);}
+    .main_banner .swiper-slide .text_box h2 { font-size: 48px; font-weight: 600; font-family: 'OneMobile';}
+
+    /* 메인 컨텐츠 */
+    h2.common { font-size: 30px; font-weight: 600;}
+    p.common { font-size: 20px; margin-top: 16px;}
+    span.common { display: block; width: 130px; line-height: 46px; background: url(../images/b_plus.png) no-repeat 20px center;}
+
+    .main_content .slide .swiper-slide .cont_slide_text { top: 132px; left: 80px;}
+
+.main_content .slide .swiper-slide.num1 a .road_cut, 
+.main_content .slide .swiper-slide.num2 a .road_cut, .main_content .slide .swiper-slide.num3 a .road_cut, 
+.main_content .slide .swiper-slide.num4 a .road_cut, .main_content .slide .swiper-slide.num5 a .road_cut, 
+.main_content .slide .swiper-slide.num6 a .road_cut, .main_content .slide .swiper-slide.num7 a .road_cut, 
+.main_content .slide .swiper-slide.num8 a .road_cut, .main_content .slide .swiper-slide.num9 a .road_cut, 
+.main_content .slide .swiper-slide.num10 a .road_cut, .main_content .slide .swiper-slide.num11 a .road_cut, 
+.main_content .slide .swiper-slide.num12 a .road_cut, .main_content .slide .swiper-slide.num13 a .road_cut { width: 79px;}
+
+
+
+
+    .main_content .slide .swiper-slide::after { width: 28px; height: 28px; background-size: contain; right: 46px; bottom: 34px; }
+    .main_content .slide .swiper-slide .cont_slide_text h3 { font-size: 28px;}
+    .main_content .slide .swiper-slide .cont_slide_text p { margin-top: 18px; font-size: 20px;}
+
+    .main_content .notice .text_bar { height: 60px;}
+    .main_content .notice .text_bar h3 { padding-left: 22px; font-size: 20px; font-weight: 500;}
+    .main_content .notice .text_bar p { margin-left: 100px; font-size: 16px;}
+
+    /* 서브 외씨버선길 둘레길 소개 */
+    #sub_wrap { max-width: 100%; padding: 0 60px;}
+    .plus_btn.common.pup { background: #6c4795 url(../images/ws_plus.png) no-repeat 20px center;}
+
+
+	/* sub_스와이퍼 컨트롤러 */
+    .swiper-button-next.sub_slide_wrap { left: -15px;}
+    .swiper-button-prev.sub_slide_wrap { right: -15px;}
+
+    .swiper-button-next.sub_slide_wrap,
+    .swiper-button-prev.sub_slide_wrap { width: 30px; height: 30px;}
+}
+
+@media screen and (min-width: 1024px) {
+    .mob { display: none!important; }
+}
+
+@media screen and (max-width:1024px) { 
+    .pc { display: none!important;}
+    
+    header { padding: 0 20px;}
+    .header_dimm { height: 60px;}
+    header .header_wrap { height: 60px;}
+    .main_banner .swiper-slide .text_box { text-align: center; padding: 0 20px;}
+    .control_box { padding: 0 20px; justify-content: center;}
+
+    .swiper-button-next.sub_slide_wrap,
+    .swiper-button-prev.sub_slide_wrap { display: block;}
+
+/* 길 공통 */
+.sub_ind_cont .tit h1 { text-align: center;}
+.sub_ind_cont .tit h1 a { position: absolute;}
+.sub_ind_cont .tit h1 .road_prev { left: 0;}
+.sub_ind_cont .tit h1 .road_next { right: 0;}
+
+    /* 모바일 메뉴 */
+    .mobile_menu { position: fixed; top: 0; left: 0; padding: 0 20px; width: 100%; height: 100%; z-index: 999; min-height: 100vh; overflow-y: auto; display: none; background-color: #fff; color: #000;}
+    .mobile_menu.on { display: block;}
+    .mob_menu_top { display: flex; justify-content: space-between; align-items: center; height: 60px;}
+    .mob_menu_top h1 { height: 40px;}
+    .mob_menu_top .close_btn img { width: 28px;}
+
+    .menu_comm .login { display: flex; align-items: center; justify-content: end; gap: 10px; margin-top: 20px;}
+    .menu_comm .login img { width: 30px;}
+    .menu_comm .login a { font-size: 1.5rem; font-weight: 600;}
+
+    .mob_menu_list { margin-top: 34px;}
+    .mob_menu_list > li { font-size: 2rem; font-weight: 600; margin-bottom: 50px;}
+    .mob_menu_list > li .road_list { display: flex; flex-wrap: wrap; margin-top: 24px; padding-left: 20px; grid-row-gap: 10px;}
+    .mob_menu_list > li .road_list li { width: calc(50%);}
+    .mob_menu_list > li .road_list li.half { width: calc(50% - 30px);}
+    .mob_menu_list > li .road_list li a { font-size: 1.5rem; color: #666; font-weight: 500;}
+
+    .mob_menu_list > li .road_list.road { gap: 17.5px;}
+    .mob_menu_list > li .road_list.road li { width: calc(100% / 5 - 14px); text-align: center; color: #666; font-weight: 500;}
+    .mob_menu_list > li .road_list li:nth-child(2), .mob_menu_list > li .road_list li:nth-child(4) { margin-left: 30px;}
+    .mob_menu_list > li .road_list.road li:nth-child(2), .mob_menu_list > li .road_list.road li:nth-child(4) { margin-left: 0;}
+    .mob_menu_list > li .road_list li a span { display: block; margin-top: 10px; color: #666; font-weight: 500;}
+    .mob_menu_list > li .road_list li a img { height: 50px;}
+
+
+
+    /* 두번째 섹션 */
+    .icon_list ul {padding: 30px 20px;}
+
+    /* 메인 컨텐츠 */
+    .main_content { padding: 0 20px; margin: 74px auto 0;}
+
+    .main_content .slide { color: #000; margin-top: 32px;}
+    
+    .main_content .slide .swiper-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 15px;}
+
+    .main_content .notice .text_bar { height: 60px; background-size: 22px;}
+    .main_content .notice .text_bar img { width: 26px;}
+    .main_content .notice .text_bar h3 { padding-left: 18px; font-size: 18px;}
+    .main_content .notice .text_bar p { font-size: 16px;}
+
+    .main_content .notice .notice_list h4 { font-size: 24px; padding-bottom: 26px;}
+
+    /* 네번째 섹션 메인 컨텐츠 */
+    span.common.block { position: static; padding-left: 24px; background-size: 18px auto;}
+    .sub_bnr { position: relative; margin-top: 88px; height: 300px; background-color: #f9f9f9; border-bottom: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8;}
+    .sub_bnr .sub_bnr_wrap::after { width: 420px; height: 320px; right: 20px;}
+    .sub_bnr .sub_bnr_wrap { padding: 0 20px;}
+
+    /* 다섯번째 섹션 완주후기 */
+    .review { padding: 90px 20px;}
+    .review ul { display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 48px;}
+    .review ul li a p { margin: 12px 0; font-size: 18px; font-weight: 500; color: #000;}
+
+    /* footer */
+    footer .footer_wrap { max-width: 100%; padding: 70px 20px;}
+    footer .footer_wrap address { width: 40%;}
+    footer .footer_wrap address img { width: 180px;}
+    footer .footer_wrap address p { font-size: 16px;}
+    footer .footer_wrap address p span { font-size: 16px;}
+
+    footer .footer_wrap .call { width: 60%;}
+    footer .footer_wrap .call dl { margin-bottom: 40px; width: 50%; color: #c9c9c9;}
+    footer .footer_wrap .call dl dt p { width: 100px; line-height: 36px; font-size: 18px;}
+    footer .footer_wrap .call dl dd a { font-size: 16px;}
+
+    /* 서브 외씨버선길 둘레길 소개 */
+    #sub_wrap { padding: 0 20px;}
+    .plus_btn.common.pup { background: #6c4795; background-image: none; padding-left: 0;}
+    .rode_map .map_cont { padding: 0;}
+
+    .traffic .traffic_list { margin-top: 60px;}
+    .traffic .traffic_list ul li { padding-left: 0;}
+    .traffic .traffic_list ul li:nth-child(2) { margin-top: 56px;}
+    .traffic .traffic_list ul li:nth-child(1):before { top: -30px; left: 0;}
+    .traffic .traffic_list ul li:nth-child(2):before { top: -30px; left: 0;}
+
+    /* 주왕산 달기약수탕길 갤러리 */
+    .swiper_slide .swiper_wrap { padding: 0 20px;}
+
+    /* 둘러보기 */
+    .mountain_list ul li { display: block; padding: 50px 0; width: calc(50% - 4px);}
+    .mountain_list ul li figure { width: 100%; text-align: center;}
+.mountain_list ul li figure .new_img { width: 100%; height: auto; border-radius: 24px;}
+.mountain_list ul li:nth-child(2) { padding:0;}
+    .mountain_list ul li dl { width: 100%;}
+    .mountain_list ul li dl dt { margin-top: 30px; text-align: center; font-weight: bold;}
+    .mountain_list ul li dl dd { font-size: 1.125rem; line-height: 1.4; word-break: keep-all;}
+
+    /* 식당 및 숙박 소개 */
+    .restaurant .head span { padding-left: 0;}
+
+    /* 팝업 */
+    .popup_box { width: 80%;}
+
+	/* 방문정보 */
+            .visit_top { flex-direction: column;}
+            .visit_top figure { text-align: center;}
+            .visit_bt { text-align: center;}
+}
+
+@media screen and (max-width:730px) {
+            .c_list { gap: 10px;}
+            .c_list li { width: calc(50% - 5px);}
+        }
+@media screen and (max-width:640px) {
+/* 지도 */
+.map_link dt, .map_link dd { justify-content: space-around;}
+
+    /* rem 조정 */
+    html,body { font-size: 10px;}
+	
+    /* 모바일 메뉴 */
+
+    /* 메인 배너 */
+    .main_banner .swiper-slide .text_box h2 { font-size: 30px;}
+    .main_banner { height: 500px;}
+
+    /* 두번째 섹션 */
+    .icon_list ul li a img { width: 70px;}
+    .icon_list ul li a dl { font-size: 16px;}
+     
+    /* 완주 아이템 */
+    .sub_bnr .sub_bnr_wrap::after { display: none;}
+    .sub_bnr .sub_bnr_wrap::before {content: "";
+    display: block;
+    width: 300px;
+    height: 200px;
+    background: url(../images/item_icon.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    z-index: 0;}
+
+    /* 메인 컨텐츠 */
+    h2.common { font-size: 26px; font-weight: 600;}
+    p.common { font-size: 15px; margin-top: 20px;}
+    span.common { font-size: 14px; bottom: unset; top: 0; width: 80px; line-height: 24px; background: none; padding-left: 0;}
+    
+    .main_content .slide .swiper-slide.num1 a .road_cut { width: 47px; height: auto;}
+ 
+.main_content .slide .swiper-slide.num2 a .road_cut, .main_content .slide .swiper-slide.num3 a .road_cut, 
+.main_content .slide .swiper-slide.num4 a .road_cut, .main_content .slide .swiper-slide.num5 a .road_cut, 
+.main_content .slide .swiper-slide.num6 a .road_cut, .main_content .slide .swiper-slide.num7 a .road_cut, 
+.main_content .slide .swiper-slide.num8 a .road_cut, .main_content .slide .swiper-slide.num9 a .road_cut, 
+.main_content .slide .swiper-slide.num10 a .road_cut, .main_content .slide .swiper-slide.num11 a .road_cut, 
+.main_content .slide .swiper-slide.num12 a .road_cut, .main_content .slide .swiper-slide.num13 a .road_cut { width: 59px; height: auto;}
+
+
+    .main_content .slide .swiper-slide::after { width: 20px; height: 20px;}
+    .main_content .slide .swiper-slide .cont_slide_text h3 { font-size: 24px;}
+    .main_content .slide .swiper-slide .cont_slide_text p { margin-top: 16px; font-size: 20px;}
+
+    .main_content .notice .text_bar { display: block; height: auto; background-size: 22px; padding: 16px 22px; background-position: 10px;}
+    /* .main_content .notice .text_bar img { position: absolute; top: 50%; transform: translateY(-50%); left: 20px; width: 26px;} */
+    .main_content .notice .text_bar h3 { padding-left: 18px; font-size: 18px;}
+    .main_content .notice .text_bar p { margin-left: 20px; font-size: 16px;}
+    .main_content .notice .text_bar a { position: absolute; right: 20px; top: 50%; transform: translateY(-50%);}
+
+    .main_content .notice .notice_list { display: block; margin-top: 32px; padding: 0;}
+    .main_content .notice .notice_list a img { width: 20px;}
+    .main_content .notice .notice_list .skinny { width: 100%;}
+    .main_content .notice .notice_list .inform { width: 100%; margin-top: 32px;}
+
+    .main_content .notice .notice_list h4 { font-size: 20px; padding-bottom: 26px;}
+
+    .main_content .notice .notice_list ul li a { padding: 20px 0; font-size: 18px;}
+    .main_content .notice .notice_list ul li a p { font-size: 14px;}
+    .main_content .notice .notice_list ul li a p.new { padding-left: 50px;}
+    .main_content .notice .notice_list ul li a span { font-size: 12px;}
+
+    /* 네번째 섹션 메인 컨텐츠 */
+    span.common.block { padding-left: 0; display: inline-block; padding: 10px 20px; white-space: nowrap; width: unset;}
+    .sub_bnr { position: relative; margin-top: 88px; height: 300px; background-color: #f9f9f9; border-bottom: 1px solid #d8d8d8; border-top: 1px solid #d8d8d8;}
+    .sub_bnr .sub_bnr_wrap::after { position: static; width: 320px; height: 210px; right: 20px;}
+
+    /* 다섯번째 섹션 완주후기 */
+    .review ul li { width: calc(100% / 2 - 2%);}
+    .review ul li a p { margin: 10px 0; font-size: 14px;}
+    .review ul li a figure img { width: 180px;}
+    .review ul li a figcaption img { width: 90px;}
+
+    /* footer */
+    footer .footer_wrap { display: block; padding: 40px 20px;}
+    footer .footer_wrap address { width: 100%;}
+    footer .footer_wrap address img { width: 180px;}
+    footer .footer_wrap address p { font-size: 16px;}
+    footer .footer_wrap address p span { font-size: 16px;}
+
+    footer .footer_wrap .call { margin-top: 40px; width: 100%;}
+    footer .footer_wrap .call dl { margin-bottom: 40px; width: 50%; color: #c9c9c9;}
+    footer .footer_wrap .call dl dt p { width: 80px; line-height: 30px; font-size: 14px;}
+    footer .footer_wrap .call dl dd a { font-size: 14px;}
+
+    /* 서브 외씨버선길 둘레길 소개 */
+    .rode_map .map_cont .level { height: 50px;}
+    .rode_map .map_cont .level p { font-size: 1.25rem;}
+
+    .bus_time dt { width: auto; margin-bottom: 0;}
+
+    .rode_map { margin-top: 60px;}
+    .traffic { margin-top: 60px;}
+    .swiper_slide { margin-top: 60px; padding: 40px 0;}
+    .swiper_slide .swiper_wrap h3 { margin-bottom: 40px;}
+
+    /* 식당 및 숙박 소개 */
+    .restaurant { margin-top: 60px;}
+    .restaurant .head span { margin-top: 20px; word-break: unset;}
+    .restaurant .list_itd { margin-top: 30px;}
+    .restaurant .list_itd dl { margin-top: 30px; padding: 20px 14px;}
+    .restaurant .list_itd dl dt span {word-break: keep-all;}
+    .restaurant .list_itd dl dd { margin-top: 20px;}
+    .restaurant .list_itd dl dd p { margin-bottom: 6px;}
+
+    /* 식당 list table */
+    .restaurant_list table col { width: 100% !important;}
+    .restaurant_list table thead { display: none;}
+    .restaurant_list table td { padding: 10px 0; border-bottom: 0;}
+    .restaurant_list table tbody tr { border-bottom: 1px solid #efefef;}
+    .restaurant_list table tbody tr td { width: 100%; display: flex; margin-bottom: 2px; padding: 5px; border-bottom: none; font-size: 14px; line-height: 18px;}
+    .restaurant_list table tbody tr td:before { display: inline-block; margin-right: 12px; -webkit-box-flex: 0; -ms-flex: 0 0 100px; flex: 0 0 100px; font-weight: 700; content: attr(data-label);}
+
+    /* 외씨버선길소개 */
+    .content { margin-top: 22px; display: block;}
+    .content dt { width: 60%; margin: 0 auto;}
+    .content dt.wd { width: 60%}
+    .content dd { width: 100%; margin-top: 22px;}
+    .content dd p:nth-of-type(2) { margin-top: 10px;}
+
+    .content dd ul li { margin-bottom: 10px;}
+
+    /* 완주안내 */
+    .bnr_itd figcaption { margin-top: 30px; padding: 20px 34px;}
+    .bnr_itd figcaption p { margin-bottom: 10px;}
+
+    .stamp { margin: 20px 0;}
+    .stamp ul { padding: 18px 0;}
+    .stamp ul li { margin-bottom: 34px;}
+    .stamp ul li .text_list .address { width: 100%;}
+
+    .plus_btn.common.pup.bn { width: auto; padding: 5px 10px; top: -10px;}
+
+    /* 인증포인트 안내 */
+    .point_guide { margin-top: 50px;}
+    .point_guide ul { margin-top: 50px;}
+    .point_guide ul li { width: 100%; margin-bottom: 20px;}
+    .point_guide ul li .point_img_box { margin-top: 24px; display: flex; justify-content: space-around;}
+    .point_guide ul li .point_img_box dd { margin-top: 20px; text-align: center; font-size: 1.125rem; font-weight: 500; color: #000;}
+
+    /* 장계향디미방길 */
+    .story p::after { margin-left: 0; width: 100%;}
+
+    /* 3길 시간표 */
+    .doub_time { display: block;}
+    .doub_time dl { width: 100%;}
+    .doub_time .bus_time dd { gap: 0;}
+
+    /* 7길 버스 */
+    .traffic .traffic_list ul li p.num7p:nth-of-type(2) { margin-bottom: 12px; padding-left: 0;}
+
+    /* 완주후기 */
+    .page_num { gap: 10px;}
+    .review_list li { width: calc(100% / 3 - 28px);}
+    .page_num li a { padding: 10px;}
+    .page_num li a.left_btn,
+    .page_num li a.right_btn { width: 32px; height: 32px;}
+
+    /* 완주후기 글쓰기 */
+    .notice_write { margin-top: 54px;}
+    .notice_write .tit input { width: 84%; height: 50px;}
+    .notice_write textarea { height: 400px;}
+    .notice_write .file { justify-content: space-between;}
+    .notice_write .file #file_name { width: 42%; height: 50px; margin-left: 0;}
+    .notice_write .file label { line-height: 30px;}
+    .file input:nth-of-type(1){ margin-left: 0;}
+    
+    .btn_box { text-align: center;}
+    .btn_box button:nth-child(1) { margin-left: 0;}
+
+    /* 커뮤니티 가이드 */
+    .search input { width: 100%;}
+    .list table tbody td { padding: 0 0 10px 0;}
+    .list table tbody td:nth-of-type(1) { padding-top: 10px;}
+    .list table tbody td .download { margin-left: 0;}
+
+    /* 11길 */
+    .note {padding: 50px 20px 50px 100px; background: #f9f9f9 url(../images/note_y.png) no-repeat left 20px center; background-size: 50px;}
+
+    /* 버스시간표 */
+    .bus_time dd span:nth-of-type(-n+8) { margin-top: 20px;}
+
+    /* 포인트 */
+    .rode_map .map_cont ul li::after { width: 46px; height: 4px; right: -24px;}
+    .rode_map .map_cont ul li img { width: 30px;}
+
+    a.common { display: block; width: 100px; line-height: 30px; padding-left: 0; bottom: unset; top: 0;}
+    .plus_btn.common.pup { bottom: unset; top: 0;}
+    a.common.block { margin-top: 32px; padding-left: 0;}
+
+    .sub_bnr .sub_bnr_text { padding-top: 20px;}
+    .sub_bnr .sub_bnr_text.item { padding-left: 240px;}
+    .sub_bnr .sub_bnr_wrap { display: flex; flex-direction: row; align-items: center;}
+
+    .mobile_menu .menu_comm .mob_menu_list li a { font-size: 16px;}
+
+    .swiper_slide::before { left: -50px;}
+
+      /* 안내표시판 */
+      .flex_box { display: flex; flex-wrap: wrap; gap: 8px;}
+      .flex_box dl { width:calc(50% - 8px);}
+      .flex_box .content dt { width: 100%; margin: unset;}
+     .flex_box .content dd h4 { text-align: center;}
+
+/* 길 */
+.map_link span { margin-left: 20px; word-break: keep-all;}
+            .map_link .kakamap, .map_link .navermap { margin-left: 50px;}
+            .map_link .kakamap img, .map_link .navermap img { width: 60px;} 
+}
+@media screen and (max-width:480px) {
+.main_banner .swiper-slide .text_box h2 { font-size: 24px;}
+.icon_list ul li a dl { font-size: 14px;}
+
+/* header */
+header h1 a { width: 140px;}
+.mob_menu_top h1 { height: 31px;}
+.mob_menu_top .close_btn img { width: 20px;}
+
+/* 메인 */
+.main_content .notice .text_bar p { margin-left: 14px; font-size: 14px;}
+.main_content .notice .text_bar { background-position: 8px;}
+.main_content .notice .text_bar a { right: 8px;}
+
+
+/* 유튜브 */
+.sb_tit { bottom: unset; top: 0; width: 130px; padding-left: 10px; line-height: 34px;}
+.sb_box { width: 130px; padding-left: 10px; top: 40px;}
+.sb_tit .aw { width: 10px; right: 10px;}
+
+.youtube { top: 310px; width: 100%; padding: 0 20px;}
+.youtube iframe { width: 100%; height: 227px;}
+.you_close_btn img { width: 24px;}
+
+
+/*11.09*/
+.main_content .slide .swiper-slide a { height: 284px;}
+.main_content .slide .swiper-slide .cont_slide_text { top: 100px; left: 20px;}
+.guide_book { margin-top: 30px; padding: 0; word-break: keep-all;}
+.main_content .slide .swiper-slide .cont_slide_text p { font-size: 16px;}
+.main_content .slide .swiper-slide a .road_cut { left: 20px; top: 36px;}
+
+#bullet { bottom: 20px;}
+
+.main_banner .swiper-button-next, .swiper-button-prev { width: 40px; height: 40px;}
+.main_banner .swiper-button-next { right: 2%;}
+.main_banner .swiper-button-prev { left: 2%;}
+
+p.common.size { font-size: 16px;}
+a.common.block.sec4 { width: 150px; line-height: 38px; font-size: 16px; padding-left: 26px; background-size: 17px; background-position-x: 22px;}
+a.common { background-size: 13px; background-position-x: 18px; padding-left: 14px; font-size: 15px;}
+
+
+
+
+    /* 완주후기 */
+    .page_num { gap: 5px;}
+    .review_list { gap: 20px;}
+    .review_list li { width: calc(100% / 2 - 10px);}
+    .page_num li a { padding: 8px;}
+    .page_num li a.left_btn,
+    .page_num li a.right_btn { width: 22px; height: 22px;}
+
+    .sub_bnr .sub_bnr_wrap::before { height: 118px; left:-72px;}
+    .sub_bnr .sub_bnr_text.item { padding-left: 140px;}
+
+    a.common.block {margin-top: 10px;}
+
+    .notice_write .file label { padding: 0 10px;}
+    .file input:nth-of-type(1) { width: 158px;}
+
+/* 달력 */
+.calendar_box .c_tit h3 { margin-bottom: 40px;}
+.calendar_box .c_tit p:nth-of-type(1) { margin-bottom: 38px;}
+.c_down { width: 260px; line-height: 60px;}
+
+/* 인증사진 */
+.table_basic table td.vm { vertical-align: middle;}
+
+/* 길 공통 */
+.bus_time { margin-left: 0; word-break: keep-all; font-size: 1.5rem;}
+
+.map_link span { margin-left: 8px; font-size: 1.3rem;}
+.kakamap a, .navermap a { gap: 2px;}
+.map_link .kakamap, .map_link .navermap { margin-left: 12px;}
+.map_link .kakamap img, .map_link .navermap img { width: 50px;} 
+.rode_map .map_cont ul li { width: calc(100% / 3);}
+.rode_map .map_cont ul li:nth-child(3)::after { display: none;}
+.rode_map .map_cont .level { flex-direction: column; height: 130px; justify-content: center; border-radius: 60px; gap: 10px;}
+.rode_map .map_cont .level p { font-size: 20px;}
+
+.rode_map .map_cont h3 { margin-top: 12px; font-size: 1.8rem;}
+
+.bus_time button, .sb_time button { width: 140px; height: 40px; bottom: unset; top: -100px;}
+.bus_time button.eit { top: -64px;}
+.bus_time button.dt { top: -102px;}
+.sb_time button { top: 190px;}
+.popup, .popup2 { width: 100%;}
+
+.sub_ind_cont .tit h1 { font-size: 2rem;}
+.sub_ind_cont .tit h1 a { top: 50%; transform: translateY(-50%);}
+.sub_ind_cont .tit h1 .road_prev img, .sub_ind_cont .tit h1 .road_next img { width: 36px;}
+.tit h1 span { width: 44px; line-height: 34px; margin-right: 12px;}
+
+.rode_map .map_cont ul li:nth-child(5)::after { display: block;}
+.rode_map .map_cont ul li.nl::after {display: none;}
+.rode_map .map_cont ul li:nth-child(6)::after, .rode_map .map_cont ul li:nth-child(9)::after { display: none;}
+.rode_map .map_cont ul li:nth-child(7), .rode_map .map_cont ul li:nth-child(8) {margin-bottom: 40px;}
+
+    .swiper-button-next.sub_slide_wrap { top: 58%;}
+    .swiper-button-prev.sub_slide_wrap { top: 58%;}
+
+/* 방문정보 */
+            .visit_top { padding: 0;}
+            .bank { padding: 34px 36px 24px 16px;}
+            .bank span { padding-left: 0;}
+            .bank h5::after { width: calc(100% - 66px);}
+
+/* 길 공통 */
+.sub_top { height: 150px;}
+.sub_ind_cont, .sub_ind_cont .tit ul { margin-top: 50px;}
+.mountain_list { margin-top: 58px;}
+.mountain_list ul li dl dt { line-height: 1.6;}
+.mountain_list ul li dl dd { font-size: 1.6rem; word-break: unset; height: 135px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical;}
+
+.story p { font-size: 2.5rem;}
+.story span { font-size: 1.5rem;}
+
+.traffic .traffic_list ul li:nth-child(1):before { top: -22px; left: 0; width: 74px; height: 74px;}
+.traffic .traffic_list ul li:nth-child(2):before { top: -24px; left: 0; width: 66px; height: 66px;}
+.traffic .traffic_list ul li h3 { margin-left: 76px; margin-bottom: 80px; font-size: 2rem; font-weight: bold;}
+
+.rode_map .map_cont ul li p { font-size: 1.4rem;}
+
+.review ul li figure { width: 160px; height: 160px;}
+.review ul li a figure img { width: 100%;}
+
+.plus_btn.common.pup.road1 { width: 80px;}
+
+.traffic .traffic_list ul li p { font-size: 1.5rem;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
